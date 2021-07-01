@@ -2,7 +2,7 @@
   <div class="home-wrap">
     这是audio的demo页面
     <!-- controls -->
-    <audio ref="audioId" src="~@/assets/back.mp3" loop ></audio>
+    <audio ref="audioId" src="~@/assets/back.mp3" loop></audio>
     <audio ref="errorId" src="~@/assets/error.mp3"></audio>
     <audio ref="successId" src="~@/assets/success.mp3"></audio>
     <button @click="successFn">成功音效</button>
@@ -57,10 +57,11 @@ export default {
 	  // 播放音乐
     this.$refs.audioId.play()
     console.log(this.$refs.audioId)
-    this.$refs.audioId.onended = () =>{
-      this.$refs.audioId.load();
-      // this.$refs.audioId.play();
-    }
+    // 标签加 lopp ；或者 onended 获知播放完成，重新播放
+    // this.$refs.audioId.onended = () =>{
+    //   this.$refs.audioId.load();
+    //   this.$refs.audioId.play();
+    // }
   }
 }
 </script>
